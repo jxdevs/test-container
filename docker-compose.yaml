@@ -1,0 +1,12 @@
+version: "3"
+services:
+  node-app:
+    build: .
+    ports:
+      - "3500:3000"
+    volumes:
+      - .:/usr/src/app # Monta el directorio actual en el contenedor
+      - /usr/src/app/node_modules # Evita sobreescribir node_modules
+      - ./public:/usr/src/app/public # Monta solo la carpeta public
+    environment:
+      - NODE_ENV=development
