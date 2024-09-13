@@ -3,7 +3,7 @@ services:
   node-app:
     build: .
     ports:
-      - "3500:3000"
+      - "3600:3000"
     volumes:
       - .:/usr/src/app # Monta el directorio actual en el contenedor
       - /usr/src/app/node_modules # Evita sobreescribir node_modules
